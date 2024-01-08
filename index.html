@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Planner Tool</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script defer src="scripts/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Project Planner</h1>
+        <div class="container__task-form">
+            <input type="text" id="taskName" class="container__task-form__taskName" placeholder="Task Name" required>
+            <textarea id="taskDescription" class="container__task-form__taskDescription"
+                placeholder="Task Description: "></textarea>
+            <input type="date" id="taskDueDate" class="container__task-form__taskDueDate" required>
+            <select id="taskStatus" class="container__task-form__taskStatus">
+                <option value="to do">To Do</option>
+                <option value="doing">Doing</option>
+                <option value="done">Done</option>
+            </select>
+            <button id="addTask" class="container__task-form__addTask">Add Task</button>
+        </div>
+        <div class="container__filter-options">
+            <button id="filterTodo">To Do</button>
+            <button id="filterDoing">Doing</button>
+            <button id="filterDone">Done</button>
+            <button id="sortByName">Sort by Name</button>
+            <button id="sortByDueDate">Sort by Due Date</button>
+        </div>
+        <div class="container__task-list">
+            <!-- Taches affichée ici:
+
+                <div class="container__task-list__task">
+                    <h3>${task.name}</h3>
+                    <p>${task.description}</p>
+                    <p>Due Date: ${task.dueDate}</p>
+                    <p>Status: ${task.status}</p>
+                </div> 
+
+            -->
+        </div>
+    </div>
+
+</body>
+
+</html>
