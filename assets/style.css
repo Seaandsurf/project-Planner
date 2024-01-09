@@ -30,13 +30,18 @@ body {
 /* Éléments de formulaire */
 input[type=text],
 input[type=date],
-select {
+select,
+textarea {
+  box-sizing: border-box;
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+  margin: 10px 0;
+  border: solid 1px white;
+  outline: none;
+  padding: 1em;
+  background-color: white;
+  box-shadow: inset 2px 5px 5px rgba(0, 0, 0, 0.3);
+  transition: 300ms ease-in-out;
 }
 
 /* Boutons */
