@@ -4,46 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Planner Tool</title>
     <link rel="stylesheet" href="assets/style.css">
     <script defer src="scripts/script.js"></script>
+    <title>Project Planner</title>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Project Planner</h1>
-        <div class="container__task-form">
-            <input type="text" id="taskName" class="container__task-form__taskName" placeholder="Task Name" required>
-            <textarea id="taskDescription" class="container__task-form__taskDescription"
-                placeholder="Task Description: "></textarea>
-            <input type="date" id="taskDueDate" class="container__task-form__taskDueDate" required>
-            <select id="taskStatus" class="container__task-form__taskStatus">
-                <option value="to do">To Do</option>
-                <option value="doing">Doing</option>
-                <option value="done">Done</option>
-            </select>
-            <button id="addTask" class="container__task-form__addTask">Add Task</button>
-        </div>
-        <div class="container__filter-options">
-            <button id="filterTodo">To Do</button>
-            <button id="filterDoing">Doing</button>
-            <button id="filterDone">Done</button>
-            <button id="sortByName">Sort by Name</button>
-            <button id="sortByDueDate">Sort by Due Date</button>
-        </div>
-        <div class="container__task-list">
-            <!-- Taches affichée ici:
+    <div id="app">
+        <h2>Project Planner</h2>
+        <input type="text" id="taskInput" placeholder="Add a new task">
+        <input type="text" id="taskDescriptionInput" placeholder="Add a task description"> 
+        <input type="date" id="dueDateInput" placeholder="Due date">
+        <select id="statusFilter">
+            <option value="all">All</option>
+            <option value="todo">Todo</option>
+            <option value="doing">Doing</option>
+            <option value="done">Done</option>
+        </select>
 
-                <div class="container__task-list__task">
-                    <h3>${task.name}</h3>
-                    <p>${task.description}</p>
-                    <p>Due Date: ${task.dueDate}</p>
-                    <p>Status: ${task.status}</p>
-                </div> 
+        <select id="sortFilter">
+            <option value="time">By Remaining Time</option>
+            <option value="title">By Title</option>
+        </select>
 
-            -->
-        </div>
+        <button id="submitTask">Add Task</button>
+        <ul id="taskList"></ul>
+        <button id="deleteCompleted">Delete Completed Tasks</button>
     </div>
+
+    
 
 </body>
 
