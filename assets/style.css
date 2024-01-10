@@ -287,6 +287,19 @@ button:hover {
   color: #000000;
 }
 
+.taskDeleteBtn {
+  margin-left: 60px;
+}
+
+.task-controls {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
 /* Responsive design */
 @media (max-width: 600px) {
   #app {

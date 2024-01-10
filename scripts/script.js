@@ -78,7 +78,6 @@ function updateUI() {
 
         const remainingTimeText = calculateRemainingTime(task.dueDate);
         const remainingTime = document.createElement('span');
-        remainingTime.classList =()
         remainingTime.textContent = `Time left: ${remainingTimeText}`;
         listItem.appendChild(remainingTime);
 
@@ -104,6 +103,7 @@ function updateUI() {
 
 
         const deleteButton = document.createElement('button');
+        deleteButton.classList.add('taskDeleteBtn');
         deleteButton.textContent = 'Delete';
         deleteButton.addEventListener('click', () => deleteTask(index));
 
